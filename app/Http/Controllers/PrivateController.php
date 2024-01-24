@@ -11,7 +11,7 @@ class PrivateController extends Controller
         return view('bio');
     }
     public function socialmedia(){
-        return view('socialmedia');
+        return view('social-media');
     }
     public function seo(){
         return view('seo');

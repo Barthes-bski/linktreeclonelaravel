@@ -28,6 +28,24 @@ new class extends Component
                     </a>
                 </div>
 
+                <!---- Navigation Links---->
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('bio')" :active="request()->routeIs('bio')" wire:navigate>
+                        {{ __('Bio') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('social-media')" :active="request()->routeIs('social-media')" wire:navigate>
+                        {{ __('Social Media') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('seo')" :active="request()->routeIs('seo')" wire:navigate>
+                        {{ __('SEO') }}
+                    </x-nav-link>
+                </div>
 
             </div>
 
@@ -78,6 +96,18 @@ new class extends Component
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('bio')" :active="request()->routeIs('bio')" wire:navigate>
+                {{ __('Bio') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('social-media')" :active="request()->routeIs('social-media')" wire:navigate>
+                {{ __('Social Media') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('seo')" :active="request()->routeIs('seo')" wire:navigate>
+                {{ __('SEO') }}
             </x-responsive-nav-link>
 
         </div>
